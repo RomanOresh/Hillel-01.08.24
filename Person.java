@@ -4,35 +4,17 @@ public class Person {
     private int age;
     private String profession;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    public Person(String name, int age, String profession) {
         this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
         this.age = age;
-    }
-
-    public String getProfession() {
-        return profession;
-    }
-
-    public void setProfession(String profession) {
         this.profession = profession;
     }
 
-    public String doPersonInfo(){
-        return "Имя: " + name + ", Возраст: " + age + ", Профессия: " + profession;
+    public void displayInfo(){
+        System.out.println("Имя: " + name + " Возраст: " + age + " Профессия: " + profession);
     }
 
-    public String doPersonInfo(String name, int age, String profession){
-        return "Имя: " + name + ", Возраст: " + age + ", Профессия: " + profession;
+    public void updateProfession(String profession){
+        this.profession = profession;
     }
 }
