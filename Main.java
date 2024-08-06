@@ -1,19 +1,18 @@
 public class Main {
     public static void main(String[] args) {
 
-        Person person = new Person();
+        Person john = new Person("John", 30, "Инженер");
+        Person mary = new Person("Mary", 25, "Учитель");
+        Person bob = new Person("Bob", 35, "Врач");
 
-        System.out.println("1." + person.doPersonInfo("John", 30, "Инженер"));
-        System.out.println(person.doPersonInfo("Mary", 25, "Учитель"));
-        System.out.println(person.doPersonInfo("Bob", 35, "Доктор"));
+        john.displayInfo();
+        mary.displayInfo();
+        bob.displayInfo();
 
-        person.setName("Alice");
-        person.setAge(28);
-        person.setProfession("Архитектор");
-        System.out.println("\n2. " + person.doPersonInfo());
-        System.out.println("(После обновления профессии)");
-        person.setProfession("Дизайнер");
-        System.out.println(person.doPersonInfo());
+        Person alice = new Person("Alice", 28, "Архитектор");
+        alice.displayInfo();
+        alice.updateProfession("Дизайнер");
+        alice.displayInfo();
 
     }
 }
